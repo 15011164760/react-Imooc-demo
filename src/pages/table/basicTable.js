@@ -11,12 +11,16 @@ export default class Tables extends React.Component {
             key: '1',
             name: '胡彦斌',
             age: 32,
-            address: '西湖区湖底公园1号'
+            address: '西湖区湖底公园1号',
+            interest:1,
+            sex:1
         }, {
             key: '2',
             name: '胡彦祖',
             age: 42,
-            address: '西湖区湖底公园1号'
+            address: '西湖区湖底公园1号',
+            interest:3,
+            sex:0
         }];
         this.setState({
             dataSource:data
@@ -51,7 +55,38 @@ export default class Tables extends React.Component {
             title: '住址',
             dataIndex: 'address',
             key: 'address',
-        }];
+        },
+        {
+            title: '性别',
+            dataIndex: 'sex',
+            key: 'sex',
+            render(data){
+                let config={
+                    '0':'女',
+                    '1':'男'
+                }
+                return config[data]
+            }
+        },
+        {
+            title: '兴趣',
+            dataIndex: 'interest',
+            key: 'interest',
+            render(data){
+                let config={
+                    '0':'唱歌',
+                    '1':'跳舞',
+                    '2':'写字',
+                    '3':'弹琴',
+                    '4':'下棋',
+                    '5':'打篮球',
+                    '6':'跑步',
+                    '7':'武术',
+                }
+                return config[data]
+            }
+        }
+        ];
         return (
             <div>
                 <Card title="基础表格">
