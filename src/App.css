@@ -1,10 +1,14 @@
 .App {
-  text-align: center;
+  /*text-align: center;*/
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
+  /*vw：视窗宽度的百分比（1vw 代表视窗的宽度为 1%）
+vh：视窗高度的百分比
+vmin：当前 vw 和 vh 中较小的一个值
+vmax：当前 vw 和 vh 中较大的一个值*/
 }
 
 .App-header {
